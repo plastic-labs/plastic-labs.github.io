@@ -1,5 +1,5 @@
 ---
-title: Plastic Labs 🥽
+title: 🥽 Plastic Labs 🥽
 enableToc: false
 ---
 
