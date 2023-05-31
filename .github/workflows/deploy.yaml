@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - hugo
+      
+permissions: read-all|write-all
 
 jobs:
   deploy:
