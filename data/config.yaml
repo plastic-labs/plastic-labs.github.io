@@ -17,9 +17,9 @@ search:
   enableSemanticSearch: false
   operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
   operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
-description: Research and development at the intersection of Human and Machine learning 🥽
+description: Building at the intersection of Human and Machine learning 🥽
 page_title:
-  "🥽 Plastic Labs 🥽"
+  "Plastic Labs 🥽"
 links:
   - link_name: Home
     link: https://plastic-labs.github.io/extrusions
