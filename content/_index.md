@@ -11,4 +11,4 @@ On this journey we realized that AI tools need a framework for securely and priv
 
 ## Blog
 
-[Open-Sourcing Bloom](https://plasticlabs.notion.site/Open-Sourcing-Pedagogical-Reasoning-bc5aed29be95475690e9227a638cb0a6)
+[[blog/Open-Sourcing Tutor-GPT]]
