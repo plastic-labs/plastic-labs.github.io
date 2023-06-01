@@ -1,4 +1,4 @@
-baseURL = "https://plastic-labs.github.io/extrusions/"
+baseURL = "https://plasticlabs.ai/"
 languageCode = "en-us"
 relativeURLs = false
 disablePathToLower = true
