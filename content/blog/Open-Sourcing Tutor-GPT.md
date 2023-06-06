@@ -17,7 +17,7 @@ Our mission is to facilitate personal, [agentic](https://arxiv.org/pdf/2304.0344
 
 ## Neo-Aristotelian Tutoring
 
-Right now, Bloom is a reading comprehension and writing workshop tutor. You can chat with it in [Discord](https://discord.gg/udtxycbh). After supplying it a passage, Bloom can coach you toward understanding or revising a piece of text. It does this by treating the user as an equal, prompting and challenging socratically.
+Right now, Bloom is a reading comprehension and writing workshop tutor. You can chat with it in [Discord](https://discord.gg/kYKXPue9Qa). After supplying it a passage, Bloom can coach you toward understanding or revising a piece of text. It does this by treating the user as an equal, prompting and challenging socratically.
 
 We started with reading and writing in natural language because (1) native language acumen is the symbolic system through which all other fluencies are learned, (2) critical dialogue is the ideal vehicle by which to do this, and (3) that's what LLMs are best at right now.
 
