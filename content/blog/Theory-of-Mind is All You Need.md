@@ -71,7 +71,7 @@ While reducing the prompt material, we took to opportunity to remove basically a
 
 Instead of simulating a tutor, it simulates _you_.
 
-## Coming soon...
+## Coming Soon...
 
 All this begs the question: what could Bloom do with even better theory of mind? And how can we facilitate that?
 
