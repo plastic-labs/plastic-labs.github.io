@@ -1,6 +1,6 @@
 
 ---
-title: "Theory-of-Mind is All You Need"
+title: "Theory-of-Mind Is All You Need"
 enableToc: false
 ---
 
