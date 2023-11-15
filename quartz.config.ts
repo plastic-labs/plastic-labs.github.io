@@ -10,7 +10,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     baseUrl: "blog.plasticlabs.ai",
-    ignorePatterns: ["assets", "private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       typography: {

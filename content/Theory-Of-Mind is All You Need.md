@@ -1,7 +1,7 @@
-
 ---
 title: "Theory-of-Mind Is All You Need"
-enableToc: false
+enableToc: true
+date: 2023-06-12
 ---
 
 ## TL;DR

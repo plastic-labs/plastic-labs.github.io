@@ -1,6 +1,7 @@
 ---
 title: "Open-Sourcing Tutor-GPT"
-enableToc: false
+enableToc: true
+date: 2023-06-09
 ---
 
 ![[assets/human_machine_learning.jpeg]]
