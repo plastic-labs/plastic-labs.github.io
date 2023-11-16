@@ -32,7 +32,12 @@ export const defaultContentPageLayout: PageLayout = {
           return false
         }
         return true
-      }
+      },
+      sortFn: (a, b) => {
+        return new Date(b.file.frontmatter.date) - new Date(a.file.frontmatter.date)
+      },
+      mapFn: undefined,
+      order: ["filter", "sort", "map"]
     })),
   ],
   right: [

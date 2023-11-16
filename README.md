@@ -1,4 +1,13 @@
-# Quartz v4
+# Plastic Labs Blog
+
+This repository contains the content and code for [Plastic Labs's Blog](https://blog.plasticlabs.ai).
+Due to the nature of our team and our obsession with PKM software we are using
+[Quartz](https://quartz.jzhao.xyz) as our blog engine to stick to some of our
+existing obsidian workflows. 
+
+Some of the docs for Quartz are kept and are below if you are interested.
+
+## Quartz v4
 
 > “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
 
@@ -11,7 +20,7 @@ Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility 
 
 [Join the Discord Community](https://discord.gg/cRFFHYye7t)
 
-## Sponsors
+### Sponsors
 
 <p align="center">
   <a href="https://github.com/sponsors/jackyzha0">
