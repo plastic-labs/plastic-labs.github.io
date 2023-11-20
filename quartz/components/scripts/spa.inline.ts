@@ -45,7 +45,14 @@ let p: DOMParser
 async function navigate(url: URL, isBack: boolean = false) {
   p = p || new DOMParser()
   const contents = await fetch(`${url}`)
-    .then((res) => res.text())
+    .then((res) => {
+      const contentType = res.headers.get("content-type")
+      if (contentType?.startsWith("text/html")) {
+        return res.text()
+      } else {
+        window.location.assign(url)
+      }
+    })
     .catch(() => {
       window.location.assign(url)
     })
@@ -109,6 +116,7 @@ function createRouter() {
       if (isSamePage(url) && url.hash) {
         const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
         el?.scrollIntoView()
+        history.pushState({}, "", url)
         return
       }
 
