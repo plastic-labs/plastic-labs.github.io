@@ -1,5 +1,5 @@
 ---
-title: "Theory-of-Mind Is All You Need"
+title: "Theory-of-Mind is All You Need"
 enableToc: true
 date: 2023-06-12
 ---

@@ -11,6 +11,6 @@ On this journey we realized that AI tools need a framework for securely and priv
 
 ## Blog
 
-[[Theory-of-Mind Is All You Need]]  
+[[Theory-of-Mind is All You Need]]  
 [[Open-Sourcing Tutor-GPT]]
 
