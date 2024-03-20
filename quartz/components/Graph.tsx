@@ -57,8 +57,12 @@ const defaultOptions: GraphOptions = {
 }
 
 export default ((opts?: GraphOptions) => {
-  const Graph: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
-    const localGraph = { ...defaultOptions.localGraph, ...opts?.localGraph }
+  const Graph: QuartzComponent = ({ fileData, displayClass, cfg }: QuartzComponentProps) => {
+    let optsCopy = { localGraph: { depth: 1 } }
+    if (fileData.slug === 'index') {
+      optsCopy.localGraph.depth = -1
+    }
+    const localGraph = { ...defaultOptions.localGraph, ...optsCopy.localGraph }
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
     return (
       <div class={classNames(displayClass, "graph")}>
