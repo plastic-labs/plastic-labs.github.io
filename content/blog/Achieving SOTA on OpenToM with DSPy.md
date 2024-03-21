@@ -4,6 +4,7 @@ date: 03.21.24
 tags:
   - "#ml"
   - blog
+  - research
 ---
 ![[robot_cafe.png]]
 
