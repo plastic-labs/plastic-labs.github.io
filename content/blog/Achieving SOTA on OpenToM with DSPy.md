@@ -1,6 +1,6 @@
 ---
 title: Achieving SOTA on OpenToM with DSPy
-date: 04.21.24
+date: 03.21.24
 tags:
   - "#ml"
   - blog
@@ -9,13 +9,13 @@ tags:
 
 ## TL;DR
 
-We used [DSPy](https://dspy-docs.vercel.app/) to achieve SOTA results on the [OpenToM](https://github.com/seacowx/OpenToM) benchmark using `gpt-3.5-turbo`. The results are positive, interesting, but kind of inconsistent. The fact you can learn few-shot examples to make a small, fast model perform just as well on a task as a large, slow one is significant. In fact, it signals to us a serious need to broaden the scope of methods for evaluating Theory of Mind capabilities in LLMs, because human social cognition goes far beyond just answering questions about characters in stories.
+We used [DSPy](https://dspy-docs.vercel.app/) to achieve SOTA results on the [OpenToM](https://github.com/seacowx/OpenToM) benchmark using `gpt-3.5-turbo`. The benchmark's creators suggest language models fall short when modeling mental states and psychology, but we find using DSPy to learn few-shot examples leads to significantly outperforming all the models tested (gpt-4-turbo included) along this precise axis. The fact you can learn few-shot examples to make a small, fast model perform just as well on a task as a large, slow one is significant. This signals to us a need to broaden the scope of methods for evaluating Theory of Mind capabilities in LLMs, because the social cognition needed to build great products goes far beyond just answering questions about stories.
 
 ## The OpenToM Dataset
 
 On February 14th, 2024 a paper dropped on ArXiv introducing the OpenToM benchmark: a new dataset to use for evaluating Theory of Mind (ToM) in Large Language Models. ToM evals are typically borrowed from developmental psychology and consist of character-driven scenarios. The language model is asked to answer questions about various aspect of the characters' mental states. This ability has traditionally been thought of to be uniquely human, but language models are starting to exhibit some level of proficiency in this task as well.
 
-The authors of this paper point out how the characters in the examples specifically lack personality traits or preferences, along with motivations for their actions. To remedy this, they devised a generation pipeline that does the following:
+The authors of this paper point out how the characters in existing datasets lack personality traits or preferences, along with motivations for their actions. To remedy this, they devised a generation pipeline that does the following:
 
 1. Endows characters with preferences and personality traits
 2. Generate intentions and the corresponding actions
@@ -43,13 +43,13 @@ In the ToM space, there is really only one prompting technique that has shown im
 
 ## Experiments with DSPy
 
-What makes the DSPy package interesting is the ability to abstract away the underlying prompts and examples if the task and metric are well defined. Anecdotally, we believe that LLMs are [[Theory of Mind Is All You Need| quite good]] at the psychological modeling the OpenToM authors suggest they "fall short" on. So we asked ourselves, "what if we could *learn* the prompts and examples to optimize performance on this benchmark?" 
+What makes the DSPy package interesting is the ability to abstract away the underlying prompts and examples if the task and metric are well defined. Anecdotally, we believe that LLMs are [[Theory of Mind Is All You Need| quite good]] at the psychological modeling the OpenToM authors suggest they "fall short" on. So we asked ourselves, "what if we could [[User State is State of the Art#^461ac9 |learn]] the prompts and examples to optimize performance on this benchmark?" 
 
 This task is relatively easy to define in DSPy terms: `(context, question -> answer)`. This [guide](https://dspy-docs.vercel.app/docs/tutorials/simplified-baleen#optimizing-the-pipeline) was helpful in crafting our modules which can be found [here](https://github.com/vintrocode/dspy-opentom/blob/main/cot.py). The authors of the OpenToM paper also released extensive [evaluation code](https://github.com/vintrocode/dspy-opentom/blob/main/opentom_evaluator.py) which we leveraged heavily for parsing the LM's answers and assessing them.
 
 We conducted the following experiments:
 
-1. Learn few-shot examples with the `BootstrapFewShotWithRandomSearch` optimizer and `gpt-3.5-turbo` with CoT
+1. Learn few-shot examples with the `BootstrapFewShotWithRandomSearch` optimizer and `gpt-3.5-turbo` with CoT prompting
 2. Do the same but use `gpt-4-turbo` as the "teacher" LM to learn the examples
 3. Learn system prompts with the `SignatureOptimizer` and the `BayesianSignatureOptimizer`
 
@@ -57,9 +57,9 @@ Obviously there is much more we could have done, so if you're reading this and y
 
 ## Results
 
-The findings of our experiments were mixed but promising. We found that the only experiment showing positive results was compiling a CoT-prompted `gpt-3.5-turbo` module with the `BootstrapFewShotWithRandomSearch` optimizer. Both of the signature optimizers and `gpt-4` as a teacher in  `BootstrapFewShotWithRandomSearch` didn't have much of an effect.  We ran the aforementioned optimizer with 25 candidate programs. This amounted to roughly $300 running 50 training examples on 25 candidate programs. We evaluated performance the same way the paper did, by randomly sampling 50 examples from a hold out set in 5 batches and computing average F1 scores. 
+The findings of our experiments were mixed but promising. We found that the only experiment that showed positive results was compiling a CoT-prompted `gpt-3.5-turbo` module with the `BootstrapFewShotWithRandomSearch` optimizer. Both of the signature optimizers and `gpt-4` as a teacher in  `BootstrapFewShotWithRandomSearch` didn't have much of an effect.  Our full experiment amounted to roughly $300 in inference costs, running 50 training examples on 25 candidate programs. We evaluated performance the same way the paper did, by randomly sampling 50 examples from a hold out set in 5 batches and computing average F1 scores. 
 
-The following table shows our results from compiling a CoT-prompted `gpt-3.5-turbo` module compared to the paper's CoT-prompted results (found in Table 3 in the [paper](https://arxiv.org/pdf/2402.06044.pdf)):
+The following table shows our results from experiment number one compared to the paper's CoT-prompted results (found in Table 3 in the [paper](https://arxiv.org/pdf/2402.06044.pdf)):
 
 | question  | mixtral | gpt-3.5-turbo | gpt-4-turbo | ***compiled-BFSWRS-3.5-turbo*** |
 | --------- | ------- | ------------- | ----------- | ------------------------------- |
@@ -72,6 +72,8 @@ The following table shows our results from compiling a CoT-prompted `gpt-3.5-tur
 | Att       | 0.519   | 0.446         | **0.58**    | 0.558                           |
 
 On most of the question types, we see CoT-prompted `gpt-3.5-turbo` compiled with `BootstrapFewShotWithRandomSearch` examples outperforms both CoT-prompted base `gpt-3.5-turbo` as well as `mixtral`, and comes close to `gpt-4-turbo` performance — which is quite impressive! The exceptions here are fine, second-order location questions (which outperform `gpt-4-turbo` 🥳) and fine, first-order location questions (which underperform `gpt-4-turbo`). Due to budget constraints, we only tested `gpt-3.5-turbo`.
+
+What's particularly interesting is the performance on the fine, second-order location questions (`Loc(f)(S)`). As a reminder, second-order questions inquire about a character's belief of another character's mental state. This is the exact type of question the OpenToM authors claim that LMs perform poorly on, yet we saw that with our learned few-shot examples, it outperforms all of the other language models significantly.
 
 ## Analysis of Augmented Examples
 
@@ -99,10 +101,10 @@ The OpenToM authors were correct in identifying common pitfalls with existing To
 
 We know that any observed "reasoning" in language models is due to behaviors learned in training. These tests are assessing their abilities to answer correctly in a single inference, which is both impressive and completely unrealistic. AI products are going to have access to memory, tools, multiple inferences, and more. They're going to be interacting with humans in social settings, not trying to answer questions about hypothetical stories. Humans and agents are much more complex than that.
 
-I'm reminded of a time when people were upset at the inability to interpret features learned by neural networks. People have mostly moved on from that limitation in favor of the improved performance, so maybe it's time to do the same here. It follows the design philosophy of DSPy to abstract away the need to manipulate explicit prompts and examples to improve performance on a task. The examples it settled on were learned — DSPy worked exactly how it's supposed to. Deep learning uses neurons in a network to learn latent, arbitrary features optimized against an objective. The abstraction has just moved up a layer to the space of prompts that can be used to optimize against an objective.
+There was a time when people were upset at the inability to interpret features learned by neural networks. People have mostly moved on from that limitation in favor of the improved performance, so maybe it's time to do the same here. It follows the design philosophy of DSPy to abstract away the need to manipulate explicit prompts and examples to improve performance on a task. The examples it settled on were learned — DSPy worked exactly how it's supposed to. Deep learning uses neurons in a network to learn latent, arbitrary features optimized against an objective. The abstraction has just moved up a layer to the space of prompts that can be used to optimize against an objective.
 
 Thus, the ability to achieve near `gpt-4-turbo` performance (and sometimes exceed it) with a "less powerful" language model that just learns the right examples to seed its generations is incredibly significant. If it can be done in these narrow tasks, it follows that there exists a vast space of other tasks this can be done for. Humans have nearly [[User State is State of the Art | infinite "states"]] to make ToM predictions about, so we're going to have to be able to do this repeatedly in order to effectively learn and update our models over time.
 
-I'd like to thank [Jacob Van Meter](https://www.linkedin.com/in/jacob-van-meter-nc/) for his significant contributions to this project, Omar Khattab and the [DSPy](https://dspy-docs.vercel.app/) team, as well as the [OpenToM](https://github.com/seacowx/OpenToM) authors for moving the ToM space forward. You can see all of our code and data [here](https://github.com/vintrocode/dspy-opentom/tree/main). 
+Major thanks go to [Jacob Van Meter](https://www.linkedin.com/in/jacob-van-meter-nc/) for his significant contributions to this project, Omar Khattab and the [DSPy](https://dspy-docs.vercel.app/) team, as well as the [OpenToM](https://github.com/seacowx/OpenToM) authors for moving the ToM space forward. You can see all of our code and data [here](https://github.com/vintrocode/dspy-opentom/tree/main). 
 
 This is just the beginning of our exploration into these topics. To stay up to date, sign up to receive our [release notes](https://plasticlabs.typeform.com/honchoupdates?typeform-source=blog.plasticlabs.ai). Or if you already know you're going to want ToM insights to personalize your AI application, join the waitlist for our [private beta](https://plasticlabs.typeform.com/honchobeta?typeform-source=honcho.dev).
