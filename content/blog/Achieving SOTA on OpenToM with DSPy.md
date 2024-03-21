@@ -9,18 +9,18 @@ tags:
 
 ## TL;DR
 
-We used [DSPy](https://dspy-docs.vercel.app/) to achieve SOTA results on the [OpenToM](https://github.com/seacowx/OpenToM) benchmark using `gpt-3.5-turbo`. The benchmark's creators suggest language models fall short when modeling mental states and psychology, but we find using DSPy to learn few-shot examples leads to significantly outperforming all the models tested (gpt-4-turbo included) along this precise axis. The fact you can learn few-shot examples to make a small, fast model perform just as well on a task as a large, slow one is significant. This signals to us a need to broaden the scope of methods for evaluating Theory of Mind capabilities in LLMs, because the social cognition needed to build great products goes far beyond just answering questions about stories.
+We used [DSPy](https://dspy-docs.vercel.app/) to achieve SOTA results on the [OpenToM](https://github.com/seacowx/OpenToM) benchmark using `gpt-3.5-turbo`. The benchmark's creators suggest language models fall short when modeling mental states and psychology, but we find using DSPy to learn few-shot examples leads to significantly outperforming all the models tested (`gpt-4-turbo` included) along this precise axis. The fact you can learn few-shot examples to make a small, fast model perform just as well on a task as a large, slow one is significant. This signals to us a need to broaden the scope of methods for evaluating Theory of Mind capabilities in LLMs, because the social cognition needed to build great products goes far beyond just answering questions about stories.
 
 ## The OpenToM Dataset
 
-On February 14th, 2024 a paper dropped on ArXiv introducing the OpenToM benchmark: a new dataset to use for evaluating Theory of Mind (ToM) in Large Language Models. ToM evals are typically borrowed from developmental psychology and consist of character-driven scenarios. The language model is asked to answer questions about various aspect of the characters' mental states. This ability has traditionally been thought of to be uniquely human, but language models are starting to exhibit some level of proficiency in this task as well.
+On February 14th, 2024 a paper dropped on ArXiv introducing the OpenToM benchmark: a new dataset to use for evaluating Theory of Mind (ToM) in Large Language Models. ToM evals are typically borrowed from developmental psychology and consist of character-driven scenarios. The language model is asked to answer questions about various aspects of the characters' mental states. This ability has traditionally been thought of to be uniquely human, but language models are starting to exhibit some level of proficiency in this task as well.
 
 The authors of this paper point out how the characters in existing datasets lack personality traits or preferences, along with motivations for their actions. To remedy this, they devised a generation pipeline that does the following:
 
 1. Endows characters with preferences and personality traits
-2. Generate intentions and the corresponding actions
+2. Generates intentions and the corresponding actions
 3. Uses an LLM to produce the narratives/stories
-4. Revise and refine those stories using human annotators
+4. Revises and refines those stories using human annotators
 
 The questions in the dataset seek to cover characters' mental states of both the physical world (e.g., the location of an object) and their psychological states (e.g., character's attitude towards a particular action). They test some of the most popular LLMs on these questions and find that they perform well on the questions that ask about the physical world but "fall short" when asked about characters' mental states.
 
@@ -36,7 +36,7 @@ Within Location there are *coarse* and *fine* questions and within both Location
 
 **Coarse**: asks about the characters' perception of whether an entity is at its initial location  
 **Fine**: inquires about the entity's explicit location  
-**First Order**: directly ask about a character's perception of the world  
+**First Order**: directly asks about a character's perception of the world  
 **Second Order**: inquires about a character's belief of another character's mental state  
 
 In the ToM space, there is really only one prompting technique that has shown improved results over Chain of Thought (CoT) called "SimToM" [(Wilf, et al)](https://arxiv.org/pdf/2311.10227.pdf), which is a two-stage prompting framework to re-phrase the narrative through the perspective of the subject in question. It's this prompting method and CoT that are the only two tested against the dataset in the paper.
@@ -57,23 +57,23 @@ Obviously there is much more we could have done, so if you're reading this and y
 
 ## Results
 
-The findings of our experiments were mixed but promising. We found that the only experiment that showed positive results was compiling a CoT-prompted `gpt-3.5-turbo` module with the `BootstrapFewShotWithRandomSearch` optimizer. Both of the signature optimizers and `gpt-4` as a teacher in  `BootstrapFewShotWithRandomSearch` didn't have much of an effect.  Our full experiment amounted to roughly $300 in inference costs, running 50 training examples on 25 candidate programs. We evaluated performance the same way the paper did, by randomly sampling 50 examples from a hold out set in 5 batches and computing average F1 scores. 
+The findings of our experiments were mixed but promising. We found that the only experiment that showed positive results was compiling a CoT-prompted `gpt-3.5-turbo` module with the `BootstrapFewShotWithRandomSearch` optimizer. Both of the signature optimizers and `gpt-4` as a teacher in  `BootstrapFewShotWithRandomSearch` didn't have much of an effect.  Our full experiment amounted to roughly $300 in inference costs, running 50 training examples on 25 candidate programs. We evaluated performance the same way the paper did, by randomly sampling 50 examples from a hold out set in 5 batches and computing average F1 scores. You can view our forum discussion in the DSPy Discord [here](https://discord.com/channels/1161519468141355160/1214629969318252574).
 
 The following table shows our results from experiment number one compared to the paper's CoT-prompted results (found in Table 3 in the [paper](https://arxiv.org/pdf/2402.06044.pdf)):
 
 | question  | mixtral | gpt-3.5-turbo | gpt-4-turbo | ***compiled-BFSWRS-3.5-turbo*** |
 | --------- | ------- | ------------- | ----------- | ------------------------------- |
-| Loc(c)(F) | 0.784   | 0.587         | **0.942**   | 0.89                            |
-| Loc(c)(S) | 0.539   | 0.457         | **0.828**   | 0.791                           |
-| Loc(f)(F) | 0.301   | **0.469**     | 0.45        | 0.303                           |
-| Loc(f)(S) | 0.18    | 0.24          | 0.187       | **0.476**                       |
-| MHop(F)   | 0.61    | 0.547         | **0.835**   | 0.64                            |
-| MHop(S)   | 0.551   | 0.414         | **0.755**   | 0.429                           |
-| Att       | 0.519   | 0.446         | **0.58**    | 0.558                           |
+| Loc$_{c}(F)$ | 0.784   | 0.587         | **0.942**   | 0.89                            |
+| Loc$_{c}(S)$ | 0.539   | 0.457         | **0.828**   | 0.791                           |
+| Loc$_{f}(F)$ | 0.301   | **0.469**     | 0.45        | 0.303                           |
+| Loc$_{f}(S)$ | 0.18    | 0.24          | 0.187       | **0.476**                       |
+| MHop$(F)$   | 0.61    | 0.547         | **0.835**   | 0.64                            |
+| MHop$(S)$   | 0.551   | 0.414         | **0.755**   | 0.429                           |
+| Att     | 0.519   | 0.446         | **0.58**    | 0.558                           |
 
 On most of the question types, we see CoT-prompted `gpt-3.5-turbo` compiled with `BootstrapFewShotWithRandomSearch` examples outperforms both CoT-prompted base `gpt-3.5-turbo` as well as `mixtral`, and comes close to `gpt-4-turbo` performance — which is quite impressive! The exceptions here are fine, second-order location questions (which outperform `gpt-4-turbo` 🥳) and fine, first-order location questions (which underperform `gpt-4-turbo`). Due to budget constraints, we only tested `gpt-3.5-turbo`.
 
-What's particularly interesting is the performance on the fine, second-order location questions (`Loc(f)(S)`). As a reminder, second-order questions inquire about a character's belief of another character's mental state. This is the exact type of question the OpenToM authors claim that LMs perform poorly on, yet we saw that with our learned few-shot examples, it outperforms all of the other language models significantly.
+What's particularly interesting is the performance on the fine, second-order location questions (Loc$_{f}(S)$). As a reminder, second-order questions inquire about a character's belief of another character's mental state. This is the exact type of question the OpenToM authors claim that LMs perform poorly on, yet we saw that with our learned few-shot examples, it outperforms all of the other language models significantly.
 
 ## Analysis of Augmented Examples
 
