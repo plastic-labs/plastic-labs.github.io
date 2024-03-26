@@ -28,7 +28,39 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({
+      sortFn: (a, b) => {
+        if (a.file && b.file) {
+          const aDate = new Date(a.file.frontmatter.date)
+          const bDate = new Date(b.file.frontmatter.date)
+          // console.log(a.file)
+          if (a.file.slug.includes("release")) {
+            console.log(a.file.frontmatter.title, a.file.frontmatter.date, aDate)
+            console.log(b.file.frontmatter.title, b.file.frontmatter.date, bDate)
+            console.log(aDate < bDate)
+          }
+          // console.log(a.file.frontmatter.title, aDate)
+          // console.log(b.file.frontmatter.title, bDate)
+          if (aDate < bDate) {
+            return 1
+          } else {
+            return -1
+          }
+        }
+        else if ((!a.file && !b.file)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+          // console.log(a.file)
+        }
+        if (a.file && !b.file) {
+          return 1
+        } else {
+          return -1
+        }
+      }
+    })),
   ],
   right: [
     Component.Graph(),
@@ -46,7 +78,33 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({
+      sortFn: (a, b) => {
+        if (a.file && b.file) {
+          const aDate = new Date(a.file.frontmatter.date)
+          const bDate = new Date(b.file.frontmatter.date)
+          // console.log(a.file.frontmatter.title, aDate)
+          // console.log(b.file.frontmatter.title, bDate)
+          if (aDate < bDate) {
+            return 1
+          } else {
+            return -1
+          }
+        }
+        else if ((!a.file && !b.file)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+          // console.log(a.file)
+        }
+        if (a.file && !b.file) {
+          return 1
+        } else {
+          return -1
+        }
+      }
+    })),
   ],
   right: [],
 }
