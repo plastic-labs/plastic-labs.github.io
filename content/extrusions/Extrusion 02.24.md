@@ -25,7 +25,7 @@ Today we seem to be in a much different memetic geography--fraught with [epistem
 
 ### (Neuro)Skeuomorphism
 
-Thinking LLM-natively has always been a struggle. All our collective [[Memories for All#^0e869d|priors about software]] tell us to [[Honcho; User Context Management for LLM Apps#^dfae31|prompt deterministically]], [[Machine learning is fixated on task performance|perfect tasks]], [[Loose theory of mind imputations are superior to verbatim response predictions|predict exactly]], make it safe, or mire any interesting findings in semantic debate. But in the process we beat the ghost out of the shell.
+Thinking LLM-natively has always been a struggle. All our collective [[Memories for All#^0e869d|priors about software]] tell us to [[Honcho; User Context Management for LLM Apps#^dfae31|prompt deterministically]], [[Machine learning is over-fixated on general task performance|perfect tasks]], [[Loose theory of mind imputations are superior to verbatim response predictions|predict exactly]], make it safe, or mire any interesting findings in semantic debate. But in the process we beat the ghost out of the shell.
 
 Rather than assume the [[Open Sourcing Tutor-GPT#^3498b7|capability overhang]] exhausted (or view it as a failure mode or forget it exists), [Plastic's](https://plasticlabs.ai) belief is we haven't even scratched the surface. Further, we're convinced this is the veil behind which huddle the truly novel applications.
 

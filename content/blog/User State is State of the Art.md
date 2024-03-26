@@ -30,7 +30,7 @@ Each human self isn't just one mythical [Ship of Theseus](https://en.wikipedia.o
 
 So what does this mean for the problem of good UX (and alignment) in AI? If each individual is vastly complex and the industry hopes to scale to billions of users, we have a daunting task.
 
-The knee jerk reaction to this level of understanding is to assume the problem intractable. How can we possibly represent, much less simulate something so enormous? Better to focus on [[Machine learning is fixated on task performance|optimizing general tasks]] like in traditional software paradigms, then serve that homogenized experience to every user (never mind missing the [[LLMs excel at theory of mind because they read|non-skeuomorphic opportunities]], we'll get to them...at some point...if they're not mirages).
+The knee jerk reaction to this level of understanding is to assume the problem intractable. How can we possibly represent, much less simulate something so enormous? Better to focus on [[Machine learning is over-fixated on general task performance|optimizing general tasks]] like in traditional software paradigms, then serve that homogenized experience to every user (never mind missing the [[LLMs excel at theory of mind because they read|non-skeuomorphic opportunities]], we'll get to them...at some point...if they're not mirages).
 
 Besides, surely mapping the full breadth of user identity requires much more compute and storage even than the massive AI hardware buildouts now getting underway. We're drifting into absurd [Borges-like territory](https://en.wikipedia.org/wiki/On_Exactitude_in_Science) imagining maps the size of the land they seek to represent. And didn't [Laplace (eventually) show us](https://en.wikipedia.org/wiki/Laplace%27s_demon) that demons like this are hopelessly naive?
 
@@ -100,7 +100,7 @@ Given an arbitrary task, we define our metric as whether or not the response qua
 
 One of the biggest problems we see in the AI space is the disconnect that exists between tasks as they're defined in a general machine learning sense versus tasks that humans _actually_ find useful. 
 
-![[Machine learning is fixated on task performance#^0005ac]]
+![[Machine learning is over-fixated on general task performance#^0005ac]]
  
 The reason is because language models generate responses by sampling from a distribution of how _any one person could_ respond, not _exactly how you would_ want them to.
 
