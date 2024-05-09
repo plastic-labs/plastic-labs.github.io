@@ -33,14 +33,6 @@ export const defaultContentPageLayout: PageLayout = {
         if (a.file && b.file) {
           const aDate = new Date(a.file.frontmatter.date)
           const bDate = new Date(b.file.frontmatter.date)
-          // console.log(a.file)
-          if (a.file.slug.includes("release")) {
-            console.log(a.file.frontmatter.title, a.file.frontmatter.date, aDate)
-            console.log(b.file.frontmatter.title, b.file.frontmatter.date, bDate)
-            console.log(aDate < bDate)
-          }
-          // console.log(a.file.frontmatter.title, aDate)
-          // console.log(b.file.frontmatter.title, bDate)
           if (aDate < bDate) {
             return 1
           } else {
@@ -52,7 +44,6 @@ export const defaultContentPageLayout: PageLayout = {
             numeric: true,
             sensitivity: "base",
           })
-          // console.log(a.file)
         }
         if (a.file && !b.file) {
           return 1
@@ -83,8 +74,6 @@ export const defaultListPageLayout: PageLayout = {
         if (a.file && b.file) {
           const aDate = new Date(a.file.frontmatter.date)
           const bDate = new Date(b.file.frontmatter.date)
-          // console.log(a.file.frontmatter.title, aDate)
-          // console.log(b.file.frontmatter.title, bDate)
           if (aDate < bDate) {
             return 1
           } else {
@@ -96,7 +85,6 @@ export const defaultListPageLayout: PageLayout = {
             numeric: true,
             sensitivity: "base",
           })
-          // console.log(a.file)
         }
         if (a.file && !b.file) {
           return 1
