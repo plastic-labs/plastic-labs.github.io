@@ -18,6 +18,8 @@ Honcho health improvements:
 
 - Reliability improvements
 
+- New versions of [Python](https://pypi.org/project/honcho-ai/) and [Node](https://www.npmjs.com/package/honcho-ai) SDKs
+
 [Sign-up for the private beta](https://plasticlabs.typeform.com/honchobeta) and start building personalized agent experiences.
 
 [Join Discord](https://discord.gg/plasticlabs), introduce yourself, and tell us what you're working on.
