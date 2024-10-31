@@ -7,6 +7,7 @@ tags:
   - dev
   - yousim
 ---
+
 ## YouSim is Open Source!!!
 
 Today we open source [YouSim](https://yousim.ai/)!
@@ -16,22 +17,29 @@ Inspired by [WorldSim](https://worldsim.nousresearch.com), [WebSim](https://we
 Now you can fork, contribute, or host your own version of our identity simulator. Tweak the models, interface, prompting, or cognitive architecture to see how far we can collectively push the boundaries of the latent space.
 
 ## Updates
+
 Honcho & YouSim today:
+
 ### YouSim v1.2.0
+
 **💾 OPEN SOURCE**
+
 - [Check out the repo here](https://github.com/plastic-labs/yousim)
 
 **🔧 AUTOSCROLL FIX**
+
 - Scroll up or with generation
 
 ### Honcho v0.0.12
-- Released version v0.0.14 of the Python SDK 
-- Released version v0.0.6 of the Node SDK 
+
+- Released version v0.0.14 of the Python SDK
+- Released version v0.0.6 of the Node SDK
 - Both include upstream bug fixes
 
 ## Links
+
 - [Try YouSim](https://yousim.ai/)
 - [Tips & Tricks video](https://www.loom.com/share/b2fe578b183b400b88845656d7ceb232?sid=59c562ae-00e8-483c-82a9-7218b61f93e8)
 - [Subscribe to updates](https://plasticlabs.typeform.com/yousimupdates)
 - [Join us in Discord](https://discord.gg/plasticlabs) to swap sims, screenshots, & ASCII art
-- [[YouSim; Explore the Multiverse of Identity|Read about why we made it]]
+- [[YouSim;-Explore-The-Multiverse-of-Identity|Read about why we made it]]

@@ -12,7 +12,7 @@ tags:
 
 New Honcho Updates:
 
-- [Honcho v0.0.12](Release-Notes-10.31.24#honcho-v0012)
+- [[Release-Notes-10.31.24#honcho-v0012|Honcho v0.0.12]]
 - [Python SDK v0.0.15](https://pypi.org/project/honcho-ai/)
 - [NodeJS SDK v0.0.6](https://www.npmjs.com/package/honcho-ai)
 
