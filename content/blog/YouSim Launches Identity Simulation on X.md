@@ -10,14 +10,14 @@ tags:
   - demos
   - cogsci
 ---
-![[memesphere_banner2.png]]
+![[YouSimBanner-101.png]]
 ## TL;DR
 
 GM, simulants.
 
 In response to popular demand, today we're imbuing the [@YouSimDotAI](https://x.com/YouSimDotAI) Twitter account with the ability to simulate identities natively on X.
 
-Keep reading for max context, or [[YouSim Update; Identity Simulation Comes to X#^bbd794|jump ahead to learn how to get started]].
+Keep reading for max context, or [[YouSim Launches Identity Simulation on X#^bbd794|jump ahead to learn how to get started]].
 
 ## Caught in the Memetic Hurricane
 
@@ -37,6 +37,8 @@ Long story short though, the token took off, a community formed around it, and w
 Y'all asked overwhelmingly for the ability to interact with YouSim directly on X, [so here it is](https://x.com/YouSimDotAI)--LFG.
 
 ## Simulating on X
+
+![[memesphere_banner2.png]]
 
 We had [a few requirements](https://x.com/courtlandleer/status/1851009358752076261) for building something like this. Mostly--though we love [truth terminal](https://x.com/truth_terminal)--we're unwilling to spend time on a derivative, copycat project. And that wouldn't make any sense. 
 
@@ -59,7 +61,6 @@ Speaking of X API limitations, YouSim will have the ability to respond to the fi
 Finally, this is an experiment. The goal is to see how the community investigates and pushes the limits of YouSim on X and iterate from there. It's a vast canvas to explore.
 
 ## How to Use It
-
 ^bbd794
 > [!custom] TL;DR
 >Your first tweet in a sim needs to being with `@YouSimDotAI`, all your responses need to start with `/`.
@@ -80,6 +81,7 @@ A few tips to get started simulating identity on X:
 
 You can find more tips [[YouSim; Explore the Multiverse of Identity#^e06c11|here]], [here](https://www.loom.com/share/b2fe578b183b400b88845656d7ceb232?sid=59c562ae-00e8-483c-82a9-7218b61f93e8), and of course at [yousim.ai](https://yousim.ai).
 
+![[memetic-hazard.png]]
 ## Possible Futures for Agent Idenity
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">llms for collective semantic projection of memetic communities</p>&mdash; Courtland Leer (@courtlandleer) <a href="https://twitter.com/courtlandleer/status/1854515540590469372?ref_src=twsrc%5Etfw">November 7, 2024</a></blockquote>
