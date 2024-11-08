@@ -1,5 +1,5 @@
 ---
-title: YouSim Update; Identity Simulation Comes to X
+title: YouSim Launches Identity Simulation on X
 date: 11.08.24
 tags:
   - yousim
