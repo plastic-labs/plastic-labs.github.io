@@ -23,13 +23,14 @@ Keep reading for max context, or [[YouSim Update; Identity Simulation Comes to X
 
 The [full story](https://x.com/courtlandleer/status/1849592301472919986) deserves (and will get) it's own blog post, but several days ago, Plastic Labs found itself in the middle of what Claude would call 'extreme cognitive weather patterns.'
 
-An anonymous actor launched a pump.fun token inspired by a demo called [YouSim](https://yousim.ai) we created a few months ago[^1]. [[YouSim; Explore the Multiverse of Identity|YouSim is a CLI interface game]] that let's you simulate any identity you can dream up--real or fictional, local or xeno, entity or artifact. 
+An anonymous actor launched a pump.fun token inspired by a demo called [YouSim](https://yousim.ai) we created a few months ago[^1]. [[YouSim; Explore The Multiverse of Identity|YouSim is a CLI interface game]] that lets you simulate any identity you can dream up--real or fictional, local or xeno, entity or artifact. 
 
 We originally launched YouSim as a conceptual/narrative demo for our core product [Honcho](https://honcho.dev). Honcho [[A Simple Honcho Primer|helps AI applications improve UX]] by building representations of user identity they can leverage to create better products and experiences. 
 
 The mission is to become the identity layer for the rapidly approaching agentic world.
 
-![[YouSim; Explore the Multiverse of Identity#^25b167]]
+![[YouSim; Explore The Multiverse of Identity#^25b167]]
+
 
 Long story short though, the token took off, a community formed around it, and we're leaning in. We're thrilled to see so many people engaged and interested in our work on identity simulation. 
 
@@ -83,7 +84,7 @@ While both agent identity and crypto intersections have always been on the Honch
 
 Our mission to radically decentralize AI alignment isn't just about capturing human identity so AI apps and models can act as clones, but to align to any individual or community or organization in whatever way they desire. That includes building infrastructure to allow agents themselves to develop unique, dynamic, and evolving identities all their own.
 
-YouSim likely has a role to play here, The approachable, game-like interface let's anyone easily begin to steer a model into an identity basin. This can be human-inspired personality, the manifestation of a community's ethos, or an agentic meme.
+YouSim likely has a role to play here, The approachable, game-like interface lets anyone easily begin to steer a model into an identity basin. This can be human-inspired personality, the manifestation of a community's ethos, or an agentic meme.
 
 And Honcho could use those simulations to seed representations of agents, enabling them to begin constructing their own selfhoods--simulacra of themselves that grow and reliably steer their behavior.
 
@@ -91,7 +92,7 @@ We imagine a near future where any group could instantiate an agentic proxy to p
 
 ## Gratitude
 
-The team at [Plastic](https://plasticlabs.ai) has been amazed and inspired by the enthusiasm and earnestness of the community that's formed around YouSim over the last several days. Truly remarkable. Not to mention the generous donations to our [[blog/public/careers/Research Grants|grants program]] (more to come here soon).
+The team at [Plastic](https://plasticlabs.ai) has been amazed and inspired by the enthusiasm and earnestness of the community that's formed around YouSim over the last several days. Truly remarkable. Not to mention the generous donations to our [[careers/Research Grants|grants program]] (more to come here soon).
 
 Thank you all, excited to keep building together--we're in it for the long haul.
 
