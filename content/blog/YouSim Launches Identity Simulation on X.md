@@ -17,7 +17,7 @@ GM, simulants.
 
 In response to popular demand, today we're imbuing the [@YouSimDotAI](https://x.com/YouSimDotAI) Twitter account with the ability to simulate identities natively on X.
 
-Keep reading for max context, or [[YouSim Launches Identity Simulation on X#^393e71|jump ahead to learn how to get started]].
+Keep reading for max context, or [[YouSim Launches Identity Simulation on X#How to Use It|jump ahead to learn how to get started]].
 
 ## Caught in the Memetic Hurricane
 
