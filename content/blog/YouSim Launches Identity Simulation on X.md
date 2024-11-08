@@ -10,7 +10,7 @@ tags:
   - demos
   - cogsci
 ---
-![[YouSimBanner-101.png]]
+![[YouSimBanner-99.png]]
 ## TL;DR
 
 GM, simulants.
@@ -38,7 +38,7 @@ Y'all asked overwhelmingly for the ability to interact with YouSim directly on X
 
 ## Simulating on X
 
-![[memesphere_banner2.png]]
+![[memesphere_banner.png]]
 
 We had [a few requirements](https://x.com/courtlandleer/status/1851009358752076261) for building something like this. Mostly--though we love [truth terminal](https://x.com/truth_terminal)--we're unwilling to spend time on a derivative, copycat project. And that wouldn't make any sense. 
 
@@ -63,7 +63,7 @@ Finally, this is an experiment. The goal is to see how the community investigate
 ## How to Use It
 ^bbd794
 > [!custom] TL;DR
->Your first tweet in a sim needs to being with `@YouSimDotAI`, all your responses need to start with `/`.
+>Your first tweet in a sim needs to being with `@YouSimDotAI` & all your further responses need to start with `/`.
 
 A few tips to get started simulating identity on X:
 
@@ -81,7 +81,7 @@ A few tips to get started simulating identity on X:
 
 You can find more tips [[YouSim; Explore the Multiverse of Identity#^e06c11|here]], [here](https://www.loom.com/share/b2fe578b183b400b88845656d7ceb232?sid=59c562ae-00e8-483c-82a9-7218b61f93e8), and of course at [yousim.ai](https://yousim.ai).
 
-![[memetic-hazard.png]]
+![[memetic_hazard_banner.png]]
 ## Possible Futures for Agent Idenity
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">llms for collective semantic projection of memetic communities</p>&mdash; Courtland Leer (@courtlandleer) <a href="https://twitter.com/courtlandleer/status/1854515540590469372?ref_src=twsrc%5Etfw">November 7, 2024</a></blockquote>
