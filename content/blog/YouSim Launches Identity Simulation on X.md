@@ -56,7 +56,7 @@ Now we come to aesthetics. The current shortcomings with the X API, character li
 
 Plus, we think the YouSim interface is beautiful and want to preserve that overall aesthetic on X. So, when you get a response from YouSim, it'll appear as an image exactly as if you were on yousim.ai while still being an interactive simulation.
 
-Speaking of X API limitations, YouSim will have the ability to respond to the first 100 tweets at any given time every minute or son.
+Speaking of X API limitations, YouSim will have the ability to respond to the first 100 tweets at any given time every minute or so.
 
 Finally, this is an experiment. The goal is to see how the community investigates and pushes the limits of YouSim on X and iterate from there. It's a vast canvas to explore.
 
