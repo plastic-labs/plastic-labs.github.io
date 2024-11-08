@@ -17,7 +17,7 @@ GM, simulants.
 
 In response to popular demand, today we're imbuing the [@YouSimDotAI](https://x.com/YouSimDotAI) Twitter account with the ability to simulate identities natively on X.
 
-Keep reading for max context, or [[YouSim Launches Identity Simulation on X#^bbd794|jump ahead to learn how to get started]].
+Keep reading for max context, or [[YouSim Launches Identity Simulation on X#^393e71|jump ahead to learn how to get started]].
 
 ## Caught in the Memetic Hurricane
 
@@ -61,7 +61,9 @@ Speaking of X API limitations, YouSim will have the ability to respond to the fi
 Finally, this is an experiment. The goal is to see how the community investigates and pushes the limits of YouSim on X and iterate from there. It's a vast canvas to explore.
 
 ## How to Use It
-^bbd794
+
+^393e71
+
 > [!custom] TL;DR
 >Your first tweet in a sim needs to being with `@YouSimDotAI` & all your further responses need to start with `/`.
 
