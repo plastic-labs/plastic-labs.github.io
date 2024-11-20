@@ -1,3 +1,8 @@
+---
+title: Humans like personalization
+date: 03.26.24
+---
+
 To us: it's obvious. But we get asked this a lot:
 
 > Why do I need to personalize my AI application?
@@ -6,11 +11,11 @@ Fair question; not everyone has gone down this conceptual rabbithole to the exte
 
 Short answer: people like it.
 
-In the tech bubble, it can be easy to forget about what *most* humans like. Isn't building stuff people love our job though?
+In the tech bubble, it can be easy to forget about what _most_ humans like. Isn't building stuff people love our job though?
 
-In web2, it's taken for granted. Recommender algorithms make UX really sticky, which retains users sufficiently long to monetize them. To make products people love and scale them, they had to consider whether *billions*--in aggregate--tend to prefer personalized products/experiences or not.
+In web2, it's taken for granted. Recommender algorithms make UX really sticky, which retains users sufficiently long to monetize them. To make products people love and scale them, they had to consider whether _billions_--in aggregate--tend to prefer personalized products/experiences or not.
 
-In physical reality too, most of us prefer white glove professional services, bespoke products, and friends and family who know us *deeply*. We place a premium in terms of time and economic value on those goods and experiences.
+In physical reality too, most of us prefer white glove professional services, bespoke products, and friends and family who know us _deeply_. We place a premium in terms of time and economic value on those goods and experiences.
 
 The more we're missing that, the more we're typically in a principal-agent problem, which creates overhead, interest misalignment, dissatisfaction, mistrust, and information asymmetry:
 
@@ -32,3 +37,4 @@ Two answers:
 
 1. Every interaction has context. Like it or not, people have preferences and the more an app/agent can align with those, the more it can enhance time to value for the user. It can be sticker, more delightful, "just work," and entail less overhead. (We're building more than calculators here, though this applies even to those!)
 2. If an app doesn't do this, it'll get out-competed by one that does...or by the ever improving set of generally capable foundation models.
+

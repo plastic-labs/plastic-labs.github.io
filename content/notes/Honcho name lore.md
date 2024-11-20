@@ -1,6 +1,11 @@
-Earlier this year [Courtland](https://x.com/courtlandleer) was reading *Rainbows End*, [Vernor Vinge's](https://en.wikipedia.org/wiki/Vernor_Vinge) [seminal augmented reality novel](https://en.wikipedia.org/wiki/Rainbows_End_(novel)), when he came across the term "Local Honcho[^1]":
+---
+title: Honcho name lore
+date: 01.26.24
+---
 
->We simply put our own agent nearby, in a well-planned position with essentially zero latencies. What the Americans call a Local Honcho.
+Earlier this year [Courtland](https://x.com/courtlandleer) was reading _Rainbows End_, [Vernor Vinge's](https://en.wikipedia.org/wiki/Vernor_Vinge) [seminal augmented reality novel](<https://en.wikipedia.org/wiki/Rainbows_End_(novel)>), when he came across the term "Local Honcho[^1]":
+
+> We simply put our own agent nearby, in a well-planned position with essentially zero latencies. What the Americans call a Local Honcho.
 
 The near future Vinge constructs is one of outrageous data abundance, where every experience is riddled with information and overlayed realities, and each person must maintain multiple identities against this data and relative to those contexts.
 
@@ -8,7 +13,7 @@ It's such an intense landscape, that the entire educational system has undergone
 
 Highlighting this, a major narrative arc in the novel involves intelligence agencies running operations of pretty unfathomable global sophistication. Since (in the world of the novel) artificial intelligence has more or less failed as a research direction, this requires ultra-competent human operators able to parse and leverage high velocity information. For field operations, it requires a "Local Honcho" on the ground to act as an adaptable central nervous system for the mission and its agents:
 
->Altogether it was not as secure as Vaz’s milnet, but it would suffice for most regions of the contingency tree. Alfred tweaked the box, and now he was getting Parker’s video direct. At last, he was truly a Local Honcho.
+> Altogether it was not as secure as Vaz’s milnet, but it would suffice for most regions of the contingency tree. Alfred tweaked the box, and now he was getting Parker’s video direct. At last, he was truly a Local Honcho.
 
 For months before, Plastic had been deep into the weeds around harvesting, retrieving, & leveraging user context with LLMs. First to enhance the UX of our AI tutor (Bloom), then in thinking about how to solve this horizontally for all vertical-specific AI applications. It struck us that we faced similar challenges to the characters in _Rainbows End_ and were converging on a similar solution.
 
@@ -17,3 +22,4 @@ As you interface with the entire constellation of AI applications, you shouldn't
 But as we've discovered, LLMs are remarkable at theory of mind tasks, and thus at reasoning about user need. So unlike in the book, this administration can be offloaded to an AI. And your [[Honcho; User Context Management for LLM Apps|Honcho]] can orchestrate the relevant context and identities on your behalf, whatever the operation.
 
 [^1]: "American English, from [Japanese](https://en.wikipedia.org/wiki/Japanese_language)_[班長](https://en.wiktionary.org/wiki/%E7%8F%AD%E9%95%B7#Japanese)_ (hanchō, “squad leader”)...probably entered English during World War II: many apocryphal stories describe American soldiers hearing Japanese prisoners-of-war refer to their lieutenants as _[hanchō](https://en.wiktionary.org/wiki/hanch%C5%8D#Japanese)_" ([Wiktionary](https://en.wiktionary.org/wiki/honcho))
+

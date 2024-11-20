@@ -5,6 +5,7 @@ tags:
   - positions
   - announcements
 ---
+
 Plastic Labs is a research-driven company solving identity for the agentic world.
 
 We're building [Honcho](https://honcho.dev), the social cognition layer for AI-powered applications. Honcho synthesizes high-fidelity user representations to instantly personalize the UX of entire app ecosystems--individually aligning each user's agent stack.
@@ -20,17 +21,19 @@ We're freshly capitalized and moving fast.
 Join us. LFG.
 
 ## Open Positions
+
 - [[(FILLED) ML Research Engineer|(FILLED) ML Research Engineer]]
 - [[Founding Engineer|Founding Engineer]]
 - [[(FILLED) Full-Stack Engineer|(FILLED) Full-Stack Engineer]]
-- [[Design Contractor|Design Contractor]]
 - [[Research Fellow(s)|Research Fellow(s)]]
 - [[Plastic Intern(s)]]
 - [[Research Grants]]
 
 ## Full-Time Benefits
+
 - Salaries from $100-200k + equity
 - Significant compute & data resources
 - Full health coverage
 - No strings lifestyle stipend
 - NYC relocation assistance (optional)
+
